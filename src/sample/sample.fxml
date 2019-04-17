@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="360.0">
+            <children>
+                <Label layoutX="125.0" layoutY="14.0" text="Shutdown Commander" textAlignment="CENTER" />
+                <Label layoutX="14.0" layoutY="38.0" text="Custom Time" />
+                <RadioButton fx:id="ctS" layoutX="92.0" layoutY="38.0" mnemonicParsing="false" text="Seconds">
+               <toggleGroup>
+                  <ToggleGroup fx:id="customTime" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="ctM" layoutX="165.0" layoutY="38.0" mnemonicParsing="false" text="Minutes" toggleGroup="$customTime" />
+                <RadioButton fx:id="ctH" layoutX="236.0" layoutY="38.0" mnemonicParsing="false" text="Hours" toggleGroup="$customTime" />
+                <TextField fx:id="ctTF" layoutX="10.0" layoutY="64.0" />
+                <ToggleButton fx:id="ctSd" layoutX="165.0" layoutY="64.0" mnemonicParsing="false" text="Shutdown">
+               <toggleGroup>
+                  <ToggleGroup fx:id="customSR" />
+               </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="ctR" layoutX="248.0" layoutY="64.0" mnemonicParsing="false" text="Reboot" toggleGroup="$customSR" />
+                <Button fx:id="ctE" layoutX="208.0" layoutY="99.0" mnemonicParsing="false" text="Execute" />
+                <Label layoutX="73.0" layoutY="103.0" text="Presets" />
+                <ToggleButton fx:id="p5m" layoutX="29.0" layoutY="133.0" mnemonicParsing="false" text="5m">
+               <toggleGroup>
+                  <ToggleGroup fx:id="presets" />
+               </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="p10m" layoutX="76.0" layoutY="133.0" mnemonicParsing="false" text="10m" toggleGroup="$presets" />
+                <ToggleButton fx:id="p30m" layoutX="129.0" layoutY="133.0" mnemonicParsing="false" text="30m" toggleGroup="$presets" />
+                <ToggleButton fx:id="p1h" layoutX="29.0" layoutY="171.0" mnemonicParsing="false" text="1hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="p90m" layoutX="75.0" layoutY="171.0" mnemonicParsing="false" text="1.5hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="p2h" layoutX="132.0" layoutY="171.0" mnemonicParsing="false" text="2hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="p3h" layoutX="29.0" layoutY="203.0" mnemonicParsing="false" text="3hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="p5h" layoutX="79.0" layoutY="203.0" mnemonicParsing="false" text="5hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="p8h" layoutX="132.0" layoutY="203.0" mnemonicParsing="false" text="8hr" toggleGroup="$presets" />
+                <ToggleButton fx:id="pSd" layoutX="27.0" layoutY="239.0" mnemonicParsing="false" text="Shutdown">
+               <toggleGroup>
+                  <ToggleGroup fx:id="presetsSR" />
+               </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="pR" layoutX="113.0" layoutY="239.0" mnemonicParsing="false" text="Reboot" toggleGroup="$presetsSR" />
+                <Button fx:id="pE" layoutX="69.0" layoutY="273.0" mnemonicParsing="false" text="Execute" />
+                <Button fx:id="abort" layoutX="27.0" layoutY="318.0" mnemonicParsing="false" text="ABORT" textAlignment="CENTER" />
+                <Button fx:id="ext" layoutX="141.0" layoutY="318.0" mnemonicParsing="false" text="Exit" />
+                <Label layoutX="218.0" layoutY="136.0" text="Time Till Execution">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <Label fx:id="tmr" layoutX="230.0" layoutY="175.0" prefHeight="43.0" prefWidth="91.0" text="00:00:00">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children></AnchorPane>
+    </content>
+</ScrollPane>
